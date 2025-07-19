@@ -1,0 +1,140 @@
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: white;
+  color: #1e293b;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.08);
+  border-right: 1px solid #e2e8f0;
+}
+
+.sidebar-header {
+  padding: 2rem 1.5rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2563eb;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sidebar-nav {
+  padding: 1.5rem 0;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  margin: 0.25rem 0;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  color: #2e2e2e;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  border-radius: 10px 10px 10px 10px;
+  margin-right: 1rem;
+  position: relative;
+  white-space: nowrap;
+}
+
+.sidebar-nav a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: transparent;
+  transition: all 0.2s ease;
+  border-radius: 0 2px 2px 0;
+}
+
+.sidebar-nav a:hover {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: #2563eb;
+  transform: translateX(4px);
+}
+
+.sidebar-nav a:hover::before {
+  background: #2563eb;
+}
+
+.sidebar-nav a.active {
+  background: #EDF3FE;
+  color: #4B5EF6;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(220, 245, 255, 0.3);
+}
+
+.sidebar-nav a.active::before {
+  background: white;
+  width: 6px;
+}
+
+.sidebar-nav a.active:hover {
+  transform: translateX(2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+/* Icon styling */
+.sidebar-nav a span:first-child {
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    width: 280px;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .sidebar-header {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+  
+  .sidebar-nav {
+    padding: 1rem 0;
+  }
+}
+
+/* Tablet responsive */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .sidebar {
+    width: 240px;
+  }
+  
+  .sidebar-nav a {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
