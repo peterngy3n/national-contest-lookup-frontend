@@ -106,9 +106,6 @@ function SearchScreen() {
                 pattern="[0-9]{6,8}"
                 title="Số báo danh phải có 6-8 chữ số"
               />
-              <small style={{ color: "#64748b", fontSize: "0.875rem", marginTop: "0.25rem", display: "block" }}>
-                Ví dụ: 123456, 1234567, 12345678
-              </small>
             </div>
             
             {error && (

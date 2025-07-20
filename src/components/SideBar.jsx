@@ -17,7 +17,7 @@ function Sidebar({ isOpen, onClose }) {
               className={location.pathname === '/dashboard' ? 'active' : ''}
               onClick={onClose}
             >
-              <span>Dashboard</span>
+              <span>Thống kê</span>
             </Link>
           </li>
           <li>
@@ -26,7 +26,7 @@ function Sidebar({ isOpen, onClose }) {
               className={location.pathname === '/search-scores' ? 'active' : ''}
               onClick={onClose}
             >
-              <span>Search Scores</span>
+              <span>Tra cứu</span>
             </Link>
           </li>
           <li>
@@ -35,7 +35,7 @@ function Sidebar({ isOpen, onClose }) {
               className={location.pathname === '/reports' ? 'active' : ''}
               onClick={onClose}
             >
-              <span>Reports</span>
+              <span>TOP 10</span>
             </Link>
           </li>
         </ul>
