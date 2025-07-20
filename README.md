@@ -1,12 +1,81 @@
-# React + Vite
+# National Contest Lookup Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ứng dụng tra cứu điểm thi Đại học quốc gia được xây dựng bằng React + Vite với giao diện hiện đại, responsive và tích hợp API.
 
-Currently, two official plugins are available:
+## 🚀 Tính năng chính
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Tra cứu điểm thi**: Tra cứu điểm số theo số báo danh
+- **Dashboard**: Biểu đồ phân bố điểm số theo môn học + Top 10 thí sinh
+- **Báo cáo**: Xem chi tiết top 10 thí sinh có điểm cao nhất
+- **Responsive Design**: Giao diện thân thiện trên mọi thiết bị
+- **API Integration**: Tích hợp với backend API thực tế
 
-## Expanding the ESLint configuration
+## 🛠️ Công nghệ sử dụng
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 19.1.0**: Framework JavaScript hiện đại
+- **Vite 7.0.4**: Build tool nhanh với HMR
+- **React Router DOM 7.7.0**: Routing cho SPA
+- **Axios 1.6.7**: HTTP client cho API calls
+- **CSS3**: Styling với custom properties và responsive design
+
+## 📋 Yêu cầu hệ thống
+
+- Node.js >= 18.0.0
+- npm >= 9.0.0 hoặc yarn >= 1.22.0
+
+## 🏃‍♂️ Cách chạy project
+
+### 1. Clone repository
+
+```bash
+git clone https://github.com/peterngy3n/national-contest-lookup-frontend.git
+cd national-contest-lookup-frontend
+```
+
+### 2. Cài đặt dependencies
+
+```bash
+npm install
+```
+
+hoặc nếu sử dụng yarn:
+
+```bash
+yarn install
+```
+
+### 3. Cấu hình API endpoint
+
+Mở file `src/constant/baseURL.js` và cập nhật URL API:
+
+```javascript
+export const BASEURL = "https://your-api-domain.com/api";
+```
+
+### 4. Chạy development server
+
+```bash
+npm run dev
+```
+
+hoặc:
+
+```bash
+yarn dev
+```
+
+Ứng dụng sẽ chạy tại: `http://localhost:5173`
+
+### 5. Build cho production
+
+```bash
+npm run build
+```
+
+hoặc:
+
+```bash
+yarn build
+```
+
+Files build sẽ được tạo trong thư mục `dist/`
