@@ -112,7 +112,7 @@ const formatScoreData = (rawData) => {
   const apiFieldMapping = {
     math: ['toan', 'math'],
     literature: ['nguVan', 'literature', 'van'],
-    english: ['ngoaiNgu', 'english', 'anh'],
+    english: ['ngoainingu', 'english', 'anh'],
     physics: ['vatLi', 'physics', 'ly'],
     chemistry: ['hoaHoc', 'chemistry', 'hoa'],
     biology: ['sinhHoc', 'biology', 'sinh'],
@@ -334,10 +334,10 @@ export const getScoreReport = async (subject) => {
         subject: subject,
         subjectName: SUBJECTS[subject],
         data: {
-          'Dưới 4 điểm': reportData.lv1 || 0,
-          'Từ 4 đến 6 điểm': reportData.lv2 || 0,
-          'Từ 6 đến 8 điểm': reportData.lv3 || 0,
-          'Từ 8 đến 10 điểm': reportData.lv4 || 0
+          'Dưới 4 điểm': reportData.lv4 || 0,
+          'Từ 4 đến 6 điểm': reportData.lv3 || 0,
+          'Từ 6 đến 8 điểm': reportData.lv2 || 0,
+          'Từ 8 đến 10 điểm': reportData.lv1 || 0
         },
         total: reportData.total || 0
       };
