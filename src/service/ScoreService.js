@@ -84,7 +84,7 @@ export const SUBJECTS = {
 export const SUBJECT_API_MAPPING = {
   math: 'toan',
   literature: 'nguvan',
-  english: 'ngoaingu',
+  english: 'ngoainingu',
   physics: 'vatli',
   chemistry: 'hoahoc',
   biology: 'sinhhoc',
